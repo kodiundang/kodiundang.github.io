@@ -9,6 +9,20 @@
   "theme_color": "black",
   "background_color": "#111",
   "description": "Undangan Digital Gratisss...",
+  "file_handlers": [
+    {
+      "action": "index.html",
+      "accept": {
+        "audio/mp3": ".mp3"
+      }
+    },
+    {
+      "action": "index.html",
+      "accept": {
+        "audio/ogg": ".ogg"
+      }
+    }
+  ],
   "icons": [{
     "src": "apple-icon-72x72.png",
     "sizes": "72x72",
