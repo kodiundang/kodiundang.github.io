@@ -1,10 +1,8 @@
 {
   "name": "Ko Di Undang",
   "short_name": "kodiundang",
-  "start_url": "https://kodiundang.github.io/",
-  "scope": "/",
+  "start_url": "/",
   "display": "standalone",
-  "orientation": "portrait-primary",
   "theme_color": "#000",
   "background_color": "#111",
   "description": "Undangan Digital Gratisss...",
