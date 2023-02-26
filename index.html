@@ -39,7 +39,6 @@
   <link rel="stylesheet" href="public/src/css/style.css" />
 </head>
 <body style="margin:0;padding:0">
-  <audio src="public/static/music/maher-zain.mp3" autoplay></audio>
   <header class="fullscreenview" id="top"
     style='display: flex;justify-content: center;background-color: var(--bg-header);'>
     <div class="screenResponsive" >
@@ -217,6 +216,50 @@
       </div>
     </div>
   </footer>
+  <button hidden id="myBtn"
+    style="color: var(--logo-clr);background-color: var(--bg-header);border-radius: 4px;padding: 4px 8px;">Open
+    Modal</button>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close"><b>&times;</b></span>
+        <span class="font-custom" style="color: var(--bg-header);font-family: 'Segoe UI';"><b>Alert! Audio will play</b>
+          Check your phone volume</span>
+      </div>
+    </div>
+  </div>
+  <audio id="myAudio" hidden controls>
+    <source src="/public/static/music/maher-zain.ogg" type="audio/ogg">
+    <source src="/public/static/music/maher-zain.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+      myAudio.play();
+    }
+
+    window.addEventListener("load", (event) => {
+      document.getElementById("myBtn").click();
+    });
+  </script>
 </body>
 <script src="public/src/js/script.js"></script>
 </html>

@@ -1,13 +1,11 @@
+// Install PWA ServiceWorker
 if ("serviceWorker" in navigator) {
-  let registration;
-
-  const registerServiceWorker = async () => {
-    registration = await navigator.serviceWorker.register(
-      "./service-worker.js"
-    );
-  };
-
-  registerServiceWorker();
+  window.addEventListener("load", function () {
+    navigator.serviceWorker
+      .register("/serviceWorker.js")
+      .then((res) => console.log("service worker registered"))
+      .catch((err) => console.log("service worker not registered", err));
+  });
 }
 
 // Set the date we're counting down to
