@@ -42,13 +42,8 @@
     "type": "image/png",
     "purpose": "any"
   }, {
-    "src": "favicon-512x512.png",
-    "sizes": "512x512",
-    "type": "image/png",
-    "purpose": "maskable"
-  }, {
     "src": "/public/static/images/gift.png",
-    "sizes": "1508x1508",
+    "sizes": "1500x1500",
     "type": "image/jpg",
     "purpose": "any"
   }]
